@@ -8,7 +8,7 @@ const config = {
   header: {
     logo:
       'https://raw.githubusercontent.com/hasith/bootcamp-fullstack-developer/master/src/images/bfd_logo.png',
-    title: "",
+    title: '',
     githubUrl: 'https://github.com/hasith/bootcamp-fullstack-developer',
     helpUrl: '',
     tweetText: '',
@@ -25,10 +25,11 @@ const config = {
   sidebar: {
     forcedNavOrder: [
       '/1-introduction', // add trailing slash if enabled above
-      '/codeblock',
+      '/0-module',
     ],
     collapsedNav: [
-      '/codeblock', // add trailing slash if enabled above
+      '/1-introduction', // add trailing slash if enabled above
+      '/0-module',
     ],
     links: [
       { text: 'Edit on GitHub', link: 'https://github.com/hasith/bootcamp-fullstack-developer' },
