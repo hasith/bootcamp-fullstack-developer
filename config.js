@@ -6,10 +6,9 @@ const config = {
     trailingSlash: false,
   },
   header: {
-    logo: 'https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/brand.svg',
-    logoLink: 'https://hasura.io/learn/',
-    title:
-      "<a href=''><img class='img-responsive' src='https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/learn-logo.svg' alt='Learn logo' /></a>",
+    logo:
+      'https://raw.githubusercontent.com/hasith/bootcamp-fullstack-developer/master/src/images/bfd_logo.png',
+    title: "",
     githubUrl: 'https://github.com/hasith/bootcamp-fullstack-developer',
     helpUrl: '',
     tweetText: '',
@@ -25,13 +24,15 @@ const config = {
   },
   sidebar: {
     forcedNavOrder: [
-      '/introduction', // add trailing slash if enabled above
+      '/1-introduction', // add trailing slash if enabled above
       '/codeblock',
     ],
     collapsedNav: [
       '/codeblock', // add trailing slash if enabled above
     ],
-    links: [{ text: 'Edit on GitHub', link: 'https://github.com/hasith/bootcamp-fullstack-developer' }],
+    links: [
+      { text: 'Edit on GitHub', link: 'https://github.com/hasith/bootcamp-fullstack-developer' },
+    ],
     frontline: false,
     ignoreIndex: true,
     title:
