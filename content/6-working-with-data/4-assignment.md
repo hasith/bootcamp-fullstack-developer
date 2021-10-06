@@ -1,5 +1,5 @@
 ---
-title: "4. Code Version Control"
+title: "Assignment: Fullstack app"
 metaTitle: "Syntax Highlighting is the meta title tag for this page"
 metaDescription: "This is the meta description for this page"
 ---

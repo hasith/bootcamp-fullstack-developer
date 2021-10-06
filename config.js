@@ -23,13 +23,16 @@ const config = {
     },
   },
   sidebar: {
-    forcedNavOrder: [
-      '/1-introduction', // add trailing slash if enabled above
-      '/0-module',
-    ],
+    forcedNavOrder: [],
     collapsedNav: [
-      '/1-introduction', // add trailing slash if enabled above
-      '/0-module',
+      '/2-programming-concepts',
+      '/3-web-development',
+      '/4-version-control',
+      '/5-server-programming',
+      '/6-working-with-data',
+      '/7-js-frameworks',
+      '/8-professional-practices',
+      '/9-capstone-project'
     ],
     links: [
       { text: 'Edit on GitHub', link: 'https://github.com/hasith/bootcamp-fullstack-developer' },
