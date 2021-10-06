@@ -452,7 +452,7 @@ export const baseStyles = css`
   }
 
   .hideFrontLine .active > a {
-    background-color: #1ed3c6;
+    background-color: #001933;
     color: #fff !important;
   }
   .firstLevel ul li .collapser svg path {
