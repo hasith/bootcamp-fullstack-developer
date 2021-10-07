@@ -7,35 +7,54 @@ const plugins = [
   {
     resolve: `gatsby-plugin-layout`,
     options: {
-        component: require.resolve(`./src/templates/docs.js`)
-    }
+      component: require.resolve(`./src/templates/docs.js`),
+    },
   },
   'gatsby-plugin-emotion',
   'gatsby-plugin-react-helmet',
   {
-    resolve: "gatsby-source-filesystem",
+    resolve: 'gatsby-source-filesystem',
     options: {
-      name: "docs",
-      path: `${__dirname}/content/`
-    }
+      name: 'docs',
+      path: `${__dirname}/content/`,
+    },
   },
   {
     resolve: 'gatsby-plugin-mdx',
     options: {
       gatsbyRemarkPlugins: [
         {
-          resolve: "gatsby-remark-images",
+          resolve: 'gatsby-remark-embed-video',
           options: {
-            maxWidth: 1035,
-            sizeByPixelDensity: true
-          }
+            width: 800,
+            ratio: 1.77, // Optional: Defaults to 16/9 = 1.77
+            height: 400, // Optional: Overrides optional.ratio
+            related: false, //Optional: Will remove related videos from the end of an embedded YouTube video.
+            noIframeBorder: true, //Optional: Disable insertion of <style> border: 0
+            loadingStrategy: 'lazy', //Optional: Enable support for lazy-load offscreen iframes. Default is disabled.
+            urlOverrides: [
+              {
+                id: 'youtube',
+                embedURL: (videoId) => `https://www.youtube-nocookie.com/embed/${videoId}`,
+              },
+            ], //Optional: Override URL of a service provider, e.g to enable youtube-nocookie support
+            containerClass: 'embedVideo-container', //Optional: Custom CSS class for iframe container, for multiple classes separate them by space
+            iframeId: false, //Optional: if true, iframe's id will be set to what is provided after 'video:' (YouTube IFrame player API requires iframe id)
+          },
         },
         {
-          resolve: 'gatsby-remark-copy-linked-files'
-        }
+          resolve: 'gatsby-remark-images',
+          options: {
+            maxWidth: 1035,
+            sizeByPixelDensity: true,
+          },
+        },
+        {
+          resolve: 'gatsby-remark-copy-linked-files',
+        },
       ],
-      extensions: [".mdx", ".md"]
-    }
+      extensions: ['.mdx', '.md'],
+    },
   },
   {
     resolve: `gatsby-plugin-gtag`,
@@ -102,9 +121,7 @@ module.exports = {
   flags: {
     DEV_SSR: false,
     FAST_DEV: false, // Enable all experiments aimed at improving develop server start time
-    PRESERVE_WEBPACK_CACHE: false, // (Umbrella Issue (https://gatsby.dev/cache-clearing-feedback)) · Use webpack's persistent caching and don't delete webpack's cache when changing gatsby-node.js & gatsby-config.js files.
     PRESERVE_FILE_DOWNLOAD_CACHE: false, // (Umbrella Issue (https://gatsby.dev/cache-clearing-feedback)) · Don't delete the downloaded files cache when changing gatsby-node.js & gatsby-config.js files.
     PARALLEL_SOURCING: false, // EXPERIMENTAL · (Umbrella Issue (https://gatsby.dev/parallel-sourcing-feedback)) · Run all source plugins at the same time instead of serially. For sites with multiple source plugins, this can speedup sourcing and transforming considerably.
-    FUNCTIONS: false // EXPERIMENTAL · (Umbrella Issue (https://gatsby.dev/functions-feedback)) · Compile Serverless functions in your Gatsby project and write them to disk, ready to deploy to Gatsby Cloud
   }
 };

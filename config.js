@@ -6,8 +6,7 @@ const config = {
     trailingSlash: false,
   },
   header: {
-    logo:
-      'https://raw.githubusercontent.com/hasith/bootcamp-fullstack-developer/master/src/images/bfd_logo.png',
+    logo: 'https://raw.githubusercontent.com/hasith/bootcamp-fullstack-developer/master/src/images/bfd_logo.png',
     title: '',
     githubUrl: 'https://github.com/hasith/bootcamp-fullstack-developer',
     helpUrl: '',
@@ -23,7 +22,17 @@ const config = {
     },
   },
   sidebar: {
-    forcedNavOrder: [],
+    forcedNavOrder: [
+      '/1-introduction',
+      '/2-programming-concepts',
+      '/3-web-development',
+      '/4-version-control',
+      '/5-server-programming',
+      '/6-working-with-data',
+      '/7-js-frameworks',
+      '/8-professional-practices',
+      '/9-capstone-project',
+    ],
     collapsedNav: [
       '/2-programming-concepts',
       '/3-web-development',
@@ -32,7 +41,7 @@ const config = {
       '/6-working-with-data',
       '/7-js-frameworks',
       '/8-professional-practices',
-      '/9-capstone-project'
+      '/9-capstone-project',
     ],
     links: [
       { text: 'Edit on GitHub', link: 'https://github.com/hasith/bootcamp-fullstack-developer' },
