@@ -7,7 +7,7 @@ metaDescription: "This is the meta description for this page"
 The following is an assignment where you can create a web server with Python and Flask. You will learn the following in this assignment:
 
 - Access and parse the web with Python.
-- Manage a database.
+- Manage a database
 - Manage remote server
 - Run code via a VPS
 - Create a basic website with Python
